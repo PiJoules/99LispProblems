@@ -1,8 +1,7 @@
-(defun drop (l n)
-	; 
+(defun split (l n)
 	(if (null l)
 		nil
-		(append (nthcar (- n 1) l) (drop (nthcdr n l) n))
+		(list (nthcar n l) (nthcdr n l))
 	)
 )
 

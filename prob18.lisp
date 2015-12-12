@@ -1,12 +1,9 @@
-(defun drop (l n)
-	; 
-	(if (null l)
-		nil
-		(append (nthcar (- n 1) l) (drop (nthcdr n l) n))
-	)
+(defun slice (l start end)
+	(nthcdr (- start 1) (nthcar end l))
 )
 
 (defun nthcar (n l)
+	; get the first n elems of a list
 	(if (null l)
 		nil
 		(if (< n 1)
